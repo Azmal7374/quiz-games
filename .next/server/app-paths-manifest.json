@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(withMainLayout)/page": "app/(withMainLayout)/page.js",
+  "/(withOutMainLayout)/quizduell/page": "app/(withOutMainLayout)/quizduell/page.js",
+  "/(withOutMainLayout)/german-games/page": "app/(withOutMainLayout)/german-games/page.js",
+  "/(withOutMainLayout)/lobby/page": "app/(withOutMainLayout)/lobby/page.js",
+  "/(withOutMainLayout)/buchstaben-battle/page": "app/(withOutMainLayout)/buchstaben-battle/page.js",
+  "/(withOutMainLayout)/quiz/page": "app/(withOutMainLayout)/quiz/page.js",
+  "/(withOutMainLayout)/room/page": "app/(withOutMainLayout)/room/page.js",
+  "/(withOutMainLayout)/stadt-land-fluss/page": "app/(withOutMainLayout)/stadt-land-fluss/page.js"
+}

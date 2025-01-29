@@ -1,0 +1,16 @@
+{
+  "node_modules\\@heroui\\card\\node_modules\\@heroui\\ripple\\dist\\chunk-QHRCZSEO.mjs -> @heroui/dom-animation": {
+    "id": 27830,
+    "files": [
+      "static/chunks/334-6602ec177d92dc4c.js",
+      "static/chunks/830.5368469f74b6b679.js"
+    ]
+  },
+  "node_modules\\@heroui\\ripple\\dist\\chunk-QHRCZSEO.mjs -> @heroui/dom-animation": {
+    "id": 48365,
+    "files": [
+      "static/chunks/334-6602ec177d92dc4c.js",
+      "static/chunks/365.3b85ec9fdfc64c9f.js"
+    ]
+  }
+}

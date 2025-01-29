@@ -68,7 +68,7 @@ const Quiz: React.FC = () => {
       );
 
       if (response.status === 201) {
-        setRoomLink(`${baseUrl}/room?roomId=${newRoomCode}&username=${name}`);
+        setRoomLink(`https://brain-bitz-quiz-game.vercel.app/room?roomId=${newRoomCode}&username=${name}`);
         setQrCode(qrCodeData);
       
         // Navigate using Next.js router

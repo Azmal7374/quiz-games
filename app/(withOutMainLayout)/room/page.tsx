@@ -264,7 +264,7 @@ const RoomPage: React.FC = () => {
             {/* Render the QR Code */}
             <QRCodeCanvas
               id="qrcode-canvas"
-              value={`http://localhost:3000/room?roomId=${roomId}`}
+              value={`https://brain-bitz-quiz-game.vercel.app/room?roomId=${roomId}`}
               size={120}
             />
 
