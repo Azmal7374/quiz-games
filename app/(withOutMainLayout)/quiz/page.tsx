@@ -23,7 +23,9 @@ import jsQR from "jsqr";
 import { useRouter } from "next/navigation";
 
 const Quiz: React.FC = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (typeof window !== "undefined" && window.location.origin);
+
+
   const router = useRouter();
   const [name, setName] = useState<string>(""); 
   const [roomCode, setRoomCode] = useState<string>(""); 
