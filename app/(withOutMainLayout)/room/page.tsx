@@ -206,18 +206,15 @@ const RoomPage: React.FC = () => {
     };
   }, []);
 
-  // Generate the QR code data URL for download
   const handleDownload = () => {
     const canvas = document.getElementById(
       "qrcode-canvas"
     ) as HTMLCanvasElement | null; // Type assertion for HTMLCanvasElement
 
     if (canvas) {
-      // Ensure the canvas exists
       const url = canvas.toDataURL("image/png");
       setQRCodeURL(url);
 
-      // Trigger download
       const link = document.createElement("a");
       link.href = url;
       link.download = `room-${roomId}-qr.png`;
@@ -259,7 +256,6 @@ const RoomPage: React.FC = () => {
         </div>
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center">
-            {/* Render the QR Code */}
             <QRCodeCanvas
               id="qrcode-canvas"
               value={`https://ideal-unity-production.up.railway.app/room?roomId=${roomId}`}

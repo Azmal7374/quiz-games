@@ -6,7 +6,7 @@
 /* eslint-disable prettier/prettier */
 import { useState, useEffect } from 'react';
 
-let mockSocket: any = null; // Mock socket object
+let mockSocket: any = null; 
 
 export const connectSocket = () => {
     if (!mockSocket) {
