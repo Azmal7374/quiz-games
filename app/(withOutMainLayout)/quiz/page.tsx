@@ -23,31 +23,34 @@ import jsQR from "jsqr";
 import { useRouter } from "next/navigation";
 
 const Quiz: React.FC = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (typeof window !== "undefined" && window.location.origin);
-
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    (typeof window !== "undefined" && window.location.origin);
 
   const router = useRouter();
-  const [name, setName] = useState<string>(""); 
-  const [roomCode, setRoomCode] = useState<string>(""); 
-  const [timer, setTimer] = useState<string>(""); 
-  const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]); 
-  const [roomLink, setRoomLink] = useState<string>(""); 
-  const [qrCode, setQrCode] = useState<string>(""); 
-  const [isScannerActive, setIsScannerActive] = useState<boolean>(false); 
-  const [scannerError, setScannerError] = useState<string>(""); 
+  const [name, setName] = useState<string>("");
+  const [roomCode, setRoomCode] = useState<string>("");
+  const [timer, setTimer] = useState<string>("");
+  const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
+  const [roomLink, setRoomLink] = useState<string>("");
+  const [qrCode, setQrCode] = useState<string>("");
+  const [isScannerActive, setIsScannerActive] = useState<boolean>(false);
+  const [scannerError, setScannerError] = useState<string>("");
   const [fileUpload, setFileUpload] = useState<File | null>(null);
-  const [scannerStream, setScannerStream] = useState<MediaStream | null>(null); 
+  const [scannerStream, setScannerStream] = useState<MediaStream | null>(null);
 
   // Handle room creation
   const newRoomCode = Math.random().toString(36).substr(2, 6).toUpperCase();
 
-  
   const handleCreateRoom = async () => {
     if (!name.trim()) {
-      toast.error("Error creating room, please try again!Please enter your name before creating a room!", {
-        duration: 5000, 
-        icon: "⚠️",   
-      });
+      toast.error(
+        "Error creating room, please try again!Please enter your name before creating a room!",
+        {
+          duration: 5000,
+          icon: "⚠️",
+        }
+      );
       return;
     }
 
@@ -57,7 +60,7 @@ const Quiz: React.FC = () => {
       const roomData = {
         username: name,
         quizCategories: selectedQuizzes,
-        timer: Number(timer) || 10, 
+        timer: Number(timer) || 10,
         roomCode: newRoomCode,
         qrCode: qrCodeData,
       };
@@ -68,21 +71,23 @@ const Quiz: React.FC = () => {
       );
 
       if (response.status === 201) {
-        setRoomLink(`https://brain-bitz-quiz-game.vercel.app/room?roomId=${newRoomCode}&username=${name}`);
+        setRoomLink(
+          `https://ideal-unity-production.up.railway.app/room?roomId=${newRoomCode}&username=${name}`
+        );
         setQrCode(qrCodeData);
-      
+
         // Navigate using Next.js router
         router.push(`/room?roomId=${newRoomCode}&username=${name}`);
       } else {
         toast.error("Error creating room, please try again!", {
-          duration: 5000, 
-          icon: "⚠️",   
+          duration: 5000,
+          icon: "⚠️",
         });
       }
     } catch (error) {
       toast.error("An unexpected error occurred. Please try again.", {
-        duration: 5000, 
-        icon: "⚠️",   
+        duration: 5000,
+        icon: "⚠️",
       });
     }
   };
@@ -90,15 +95,14 @@ const Quiz: React.FC = () => {
   const handleJoinRoom = async () => {
     if (!roomCode.trim()) {
       toast.error("Please enter a valid room code!", {
-        duration: 5000, 
-        icon: "⚠️",   
+        duration: 5000,
+        icon: "⚠️",
       });
-   
+
       return;
     }
 
     try {
-    
       const response = await axios.post(
         "https://trivia-web-server-production.up.railway.app/api/room/join",
         {
@@ -111,19 +115,18 @@ const Quiz: React.FC = () => {
         router.push(`/room?roomId=${roomCode}&username=${name}`);
       } else {
         toast.error("Room not found, please check the code and try again!", {
-          duration: 5000, 
-          icon: "⚠️",   
+          duration: 5000,
+          icon: "⚠️",
         });
       }
     } catch (error) {
       toast.error("An error occurred while joining the room!", {
-        duration: 5000, 
-        icon: "⚠️",    
+        duration: 5000,
+        icon: "⚠️",
       });
     }
   };
 
-  
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? e.target.files[0] : null;
     if (file) {
@@ -147,16 +150,17 @@ const Quiz: React.FC = () => {
             );
             const decoded = jsQR(imageData.data, canvas.width, canvas.height);
             if (decoded) {
-              const url = new URL(decoded.data); 
+              const url = new URL(decoded.data);
               const roomId = url.searchParams.get("roomId");
               if (roomId) {
-                console.log(roomId); 
-                setRoomCode(roomId); e
+                console.log(roomId);
+                setRoomCode(roomId);
+                e;
               }
             } else {
               toast.error("No QR code detected in the image!", {
                 duration: 5000, // Display duration (ms)
-                icon: "⚠️",    // Add a custom icon
+                icon: "⚠️", // Add a custom icon
               });
             }
           }
@@ -259,7 +263,7 @@ const Quiz: React.FC = () => {
             <Checkbox value="Geography">Geography</Checkbox>
           </CheckboxGroup>
           <Spacer y={1.5} />
-          <Button className="bg-green-400"  onPress={handleCreateRoom}>
+          <Button className="bg-green-400" onPress={handleCreateRoom}>
             Create a Lobby
           </Button>
         </Card>
@@ -275,13 +279,16 @@ const Quiz: React.FC = () => {
             fullWidth
           />
           <Spacer y={1.5} />
-          <Button className="bg-green-400"  onPress={handleJoinRoom}>
+          <Button className="bg-green-400" onPress={handleJoinRoom}>
             Join a Lobby
           </Button>
           <Spacer y={1.5} />
           <div>
             <h3>Or Scan QR Code:</h3>
-            <Button className="bg-green-400"  onPress={() => setIsScannerActive(true)}>
+            <Button
+              className="bg-green-400"
+              onPress={() => setIsScannerActive(true)}
+            >
               Scan QR Code
             </Button>
             {isScannerActive && (
@@ -297,8 +304,6 @@ const Quiz: React.FC = () => {
             <input type="file" accept="image/*" onChange={handleFileUpload} />
           </div>
         </Card>
-
-       
       </div>
     </div>
   );

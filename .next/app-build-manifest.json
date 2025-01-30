@@ -73,12 +73,18 @@
       "static/chunks/main-app-b634fe8ee7773438.js",
       "static/chunks/app/(withOutMainLayout)/layout-14838cc80f227ca8.js"
     ],
-    "/(withOutMainLayout)/quizduell/page": [
+    "/(withOutMainLayout)/buchstaben-battle/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
       "static/chunks/4bd1b696-74ca61f534b34972.js",
       "static/chunks/517-88b58ae035b92306.js",
       "static/chunks/main-app-b634fe8ee7773438.js",
-      "static/chunks/app/(withOutMainLayout)/quizduell/page-bbf9d0cf6c1ec5f2.js"
+      "static/chunks/334-6602ec177d92dc4c.js",
+      "static/chunks/524-9f957119918a4af9.js",
+      "static/chunks/614-4e085bf8df90a18b.js",
+      "static/chunks/814-d3426f048450024e.js",
+      "static/chunks/20-de3a7e01790d5ae3.js",
+      "static/chunks/549-d2a681185039d8ab.js",
+      "static/chunks/app/(withOutMainLayout)/buchstaben-battle/page-2aecc9caa485fef2.js"
     ],
     "/(withOutMainLayout)/german-games/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
@@ -98,19 +104,6 @@
       "static/chunks/main-app-b634fe8ee7773438.js",
       "static/chunks/app/(withOutMainLayout)/lobby/page-1a8c95c3adf90b46.js"
     ],
-    "/(withOutMainLayout)/buchstaben-battle/page": [
-      "static/chunks/webpack-17c47c1416c1d34a.js",
-      "static/chunks/4bd1b696-74ca61f534b34972.js",
-      "static/chunks/517-88b58ae035b92306.js",
-      "static/chunks/main-app-b634fe8ee7773438.js",
-      "static/chunks/334-6602ec177d92dc4c.js",
-      "static/chunks/524-9f957119918a4af9.js",
-      "static/chunks/614-4e085bf8df90a18b.js",
-      "static/chunks/814-d3426f048450024e.js",
-      "static/chunks/20-de3a7e01790d5ae3.js",
-      "static/chunks/549-d2a681185039d8ab.js",
-      "static/chunks/app/(withOutMainLayout)/buchstaben-battle/page-2aecc9caa485fef2.js"
-    ],
     "/(withOutMainLayout)/quiz/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
       "static/chunks/4bd1b696-74ca61f534b34972.js",
@@ -124,7 +117,14 @@
       "static/chunks/238-988d337f1e1bd76b.js",
       "static/chunks/890-1a0dedf859edd1bf.js",
       "static/chunks/100-2308f6c3d7ee4985.js",
-      "static/chunks/app/(withOutMainLayout)/quiz/page-d18ad03e760a1ce2.js"
+      "static/chunks/app/(withOutMainLayout)/quiz/page-c0429cbbae0577a4.js"
+    ],
+    "/(withOutMainLayout)/quizduell/page": [
+      "static/chunks/webpack-17c47c1416c1d34a.js",
+      "static/chunks/4bd1b696-74ca61f534b34972.js",
+      "static/chunks/517-88b58ae035b92306.js",
+      "static/chunks/main-app-b634fe8ee7773438.js",
+      "static/chunks/app/(withOutMainLayout)/quizduell/page-bbf9d0cf6c1ec5f2.js"
     ],
     "/(withOutMainLayout)/room/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
@@ -140,7 +140,7 @@
       "static/chunks/238-988d337f1e1bd76b.js",
       "static/chunks/285-b2156439a425b2b4.js",
       "static/chunks/444-e8071537133b0798.js",
-      "static/chunks/app/(withOutMainLayout)/room/page-6ad421ee64882e28.js"
+      "static/chunks/app/(withOutMainLayout)/room/page-c39e18762b7e9e7f.js"
     ],
     "/(withOutMainLayout)/stadt-land-fluss/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",

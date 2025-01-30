@@ -50,12 +50,10 @@ const RoomPage: React.FC = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
-      const user= urlParams.get("username");
+      const user = urlParams.get("username");
       setUsername(user);
     }
   }, []);
-
-
 
   useEffect(() => {
     if (roomId) {
@@ -216,7 +214,7 @@ const RoomPage: React.FC = () => {
 
     if (canvas) {
       // Ensure the canvas exists
-      const url = canvas.toDataURL("image/png"); 
+      const url = canvas.toDataURL("image/png");
       setQRCodeURL(url);
 
       // Trigger download
@@ -264,7 +262,7 @@ const RoomPage: React.FC = () => {
             {/* Render the QR Code */}
             <QRCodeCanvas
               id="qrcode-canvas"
-              value={`https://brain-bitz-quiz-game.vercel.app/room?roomId=${roomId}`}
+              value={`https://ideal-unity-production.up.railway.app/room?roomId=${roomId}`}
               size={120}
             />
 
