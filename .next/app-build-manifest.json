@@ -104,6 +104,13 @@
       "static/chunks/396-830faa774c43e341.js",
       "static/chunks/app/(withOutMainLayout)/german-games/page-92210d524cceed3e.js"
     ],
+    "/(withOutMainLayout)/quizduell/page": [
+      "static/chunks/webpack-17c47c1416c1d34a.js",
+      "static/chunks/4bd1b696-74ca61f534b34972.js",
+      "static/chunks/517-88b58ae035b92306.js",
+      "static/chunks/main-app-b634fe8ee7773438.js",
+      "static/chunks/app/(withOutMainLayout)/quizduell/page-d4d3eb2094b8a489.js"
+    ],
     "/(withOutMainLayout)/quiz/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
       "static/chunks/4bd1b696-74ca61f534b34972.js",
@@ -119,26 +126,6 @@
       "static/chunks/100-2308f6c3d7ee4985.js",
       "static/chunks/app/(withOutMainLayout)/quiz/page-c0429cbbae0577a4.js"
     ],
-    "/(withOutMainLayout)/quizduell/page": [
-      "static/chunks/webpack-17c47c1416c1d34a.js",
-      "static/chunks/4bd1b696-74ca61f534b34972.js",
-      "static/chunks/517-88b58ae035b92306.js",
-      "static/chunks/main-app-b634fe8ee7773438.js",
-      "static/chunks/app/(withOutMainLayout)/quizduell/page-d4d3eb2094b8a489.js"
-    ],
-    "/(withOutMainLayout)/stadt-land-fluss/page": [
-      "static/chunks/webpack-17c47c1416c1d34a.js",
-      "static/chunks/4bd1b696-74ca61f534b34972.js",
-      "static/chunks/517-88b58ae035b92306.js",
-      "static/chunks/main-app-b634fe8ee7773438.js",
-      "static/chunks/334-6602ec177d92dc4c.js",
-      "static/chunks/524-9f957119918a4af9.js",
-      "static/chunks/614-4e085bf8df90a18b.js",
-      "static/chunks/814-d3426f048450024e.js",
-      "static/chunks/20-de3a7e01790d5ae3.js",
-      "static/chunks/890-1a0dedf859edd1bf.js",
-      "static/chunks/app/(withOutMainLayout)/stadt-land-fluss/page-692f2bb37a867faf.js"
-    ],
     "/(withOutMainLayout)/room/page": [
       "static/chunks/webpack-17c47c1416c1d34a.js",
       "static/chunks/4bd1b696-74ca61f534b34972.js",
@@ -153,7 +140,20 @@
       "static/chunks/238-988d337f1e1bd76b.js",
       "static/chunks/285-b2156439a425b2b4.js",
       "static/chunks/444-e8071537133b0798.js",
-      "static/chunks/app/(withOutMainLayout)/room/page-c9be16ccf4208e95.js"
+      "static/chunks/app/(withOutMainLayout)/room/page-bcb9ccc7a8eb20f4.js"
+    ],
+    "/(withOutMainLayout)/stadt-land-fluss/page": [
+      "static/chunks/webpack-17c47c1416c1d34a.js",
+      "static/chunks/4bd1b696-74ca61f534b34972.js",
+      "static/chunks/517-88b58ae035b92306.js",
+      "static/chunks/main-app-b634fe8ee7773438.js",
+      "static/chunks/334-6602ec177d92dc4c.js",
+      "static/chunks/524-9f957119918a4af9.js",
+      "static/chunks/614-4e085bf8df90a18b.js",
+      "static/chunks/814-d3426f048450024e.js",
+      "static/chunks/20-de3a7e01790d5ae3.js",
+      "static/chunks/890-1a0dedf859edd1bf.js",
+      "static/chunks/app/(withOutMainLayout)/stadt-land-fluss/page-692f2bb37a867faf.js"
     ]
   }
 }

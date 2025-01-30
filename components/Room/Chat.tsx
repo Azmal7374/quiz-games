@@ -5,7 +5,11 @@
 import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
-const clientSocket = io("https://trivia-web-server-production.up.railway.app/"); // Replace with your server URL
+
+const clientSocket = io("https://trivia-web-server-production.up.railway.app/", {
+  transports: ["websocket"],
+});
+
 
 interface ChatProps {
   userName: string;

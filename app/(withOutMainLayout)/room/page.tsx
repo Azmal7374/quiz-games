@@ -18,7 +18,10 @@ import Loading from "@/components/share/Loading/Loading";
 import { toast } from "sonner";
 import { FaDownload } from "react-icons/fa";
 
-const socket = io("https://trivia-web-server-production.up.railway.app/");
+const socket = io("https://trivia-web-server-production.up.railway.app", {
+  transports: ["websocket"],
+});
+
 
 const RoomPage: React.FC = () => {
   const searchParams = useSearchParams();
